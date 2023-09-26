@@ -1,0 +1,31 @@
+---
+title: "Coursera - Week 4"
+author: "Alexander"
+date: "2023-09-26"
+output: html_document
+---
+
+## Divisions of data science questions:
+
+1. Descriptive
+2. Explanatory
+3. Inferential
+4. Predictive
+5. Causal
+6. Mechanistic
+
+### Descriptive Analysis
+
+To *describe* or *summarize* data. Usually the first kind of analysis you perform. Generate simple summaries about the samples and their measurements. 
+
+* Measures of central tendency (mean, median, mode)
+
+* Measures of variability (range, standard deviations, variance)
+
+There is no inference about what the distribution of data means or predictions on how the data might trend in the future. It is just to show you a summary of the data you collected. 
+
+#### Calls in R for doing these tasks are:
+
+`mean()` or `median()` or `mode()`. 
+
+You may also call `summary()`

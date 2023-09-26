@@ -357,18 +357,18 @@ display: none;
 </div>
 
 
-<div id="divisions-of-data-science-questions" class="section level2">
-<h2>Divisions of data science questions:</h2>
+<div id="divisions-of-data-science-questions" class="section level1">
+<h1>Divisions of data science questions:</h1>
 <ol style="list-style-type: decimal">
 <li>Descriptive</li>
-<li>Explanatory</li>
+<li>Exploratory</li>
 <li>Inferential</li>
 <li>Predictive</li>
 <li>Causal</li>
 <li>Mechanistic</li>
 </ol>
-<div id="descriptive-analysis" class="section level3">
-<h3>Descriptive Analysis</h3>
+<div id="descriptive-analysis" class="section level2">
+<h2>Descriptive Analysis</h2>
 <p>To <em>describe</em> or <em>summarize</em> data. Usually the first
 kind of analysis you perform. Generate simple summaries about the
 samples and their measurements.</p>
@@ -380,12 +380,79 @@ variance)</p></li>
 <p>There is no inference about what the distribution of data means or
 predictions on how the data might trend in the future. It is just to
 show you a summary of the data you collected.</p>
-<div id="calls-in-r-for-doing-these-tasks-are" class="section level4">
-<h4>Calls in R for doing these tasks are:</h4>
+<div id="some-calls-in-r-for-doing-these-tasks-are" class="section level4">
+<h4>Some calls in R for doing these tasks are:</h4>
 <p><code>mean()</code> or <code>median()</code> or
 <code>mode()</code>.</p>
 <p>You may also call <code>summary()</code></p>
 </div>
+</div>
+<div id="exploratory-analysis" class="section level2">
+<h2>Exploratory Analysis</h2>
+<p>The goal here is to examine or explore the data to find relationships
+that were not previously known. This is often done through correlation
+matrices or through data visualization (e.g. plotting).</p>
+<p>We can use the ggplot package in R to plot data, for example.</p>
+<p>We can can also call <code>cor()</code> which will generate a
+correlation matrix for the selected variables. We can also call
+<code>cov()</code>, for covariance.</p>
+<p>Critically, observing a relationship between two variables <em>does
+not</em> mean that one necessarily causes the other. Instead, it
+suggests further investigation (inferential analysis) is warranted.</p>
+<p>Exploratory analysis are useful for formulating hypotheses and drive
+design for future studies and data collection.</p>
+</div>
+<div id="inferential-statistics" class="section level2">
+<h2>Inferential Statistics</h2>
+<p>Goal is to use a relatively <em>small sample of data</em> to
+<em>infer</em> or say something about the target population (or to
+generalize the information from the small sample).</p>
+<p>Typically, it involves using the data you have collected to estimate
+that value in the population, based on a measure of uncertainty about
+the estimate generated from your sample. To do this we need to make
+certain assumptions (independence, Central Limit Theorem, etc…) to
+determine what distributions best encapsulates how our data is
+behaving.</p>
+</div>
+<div id="predictive-analysis" class="section level2">
+<h2>Predictive Analysis</h2>
+<p>The goal of predictive analysis is to use <em>current data</em> to
+make <em>predictions</em> about <em>future</em> data. In other words,
+you are using current and historical data to find patterns and the
+predict the <em>likelihood</em> of future outcomes within a interval of
+certainty.</p>
+<p>Accuracy of predictions is dependent on measuring the right
+variables. Some models are better or worse than others, for specific
+cases. You will have to choose the model with the “best fit”.</p>
+</div>
+<div id="causal-analysis" class="section level2">
+<h2>Causal Analysis</h2>
+<p>The goal of causal analysis is to see what happens to one variable
+when we manipulate another - looking at the <em>cause</em> and
+<em>effect</em> of a <em>relationship</em>.</p>
+<p>Generally, this is done through (multiple) regression analysis. We
+see an observed change in one variable given a 1 unit change (i.e. 1kg,
+1lbs, 1 mile, 1 life-year, 1 mmHg, SaO2, etc…) in another holding
+everything else constant (i.e., controlling for confounders).</p>
+</div>
+<div id="mechanistic-analysis" class="section level2">
+<h2>Mechanistic Analysis</h2>
+<p>Mechanistic analyses are not nearly as commonly used as the previous
+analyses - the goal of mechanistic analysis is to understand the
+<em>exact changes in variables</em> that lead to <em>exact changes in
+other variables</em>. These analyses are exceedingly hard to use to
+infer much, except in simple situations or in those that are nicely
+modeled by deterministic equations. Given this description, it might be
+clear to see how mechanistic analyses are most commonly applied to
+physical or engineering sciences; biological sciences, for example, are
+far too noisy of data sets to use mechanistic analysis. Often, when
+these analyses are applied, the only noise in the data is measurement
+error, which can be accounted for.</p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>Now you know the various types of data analysis and their goals.</p>
+<p>As a side-note, i have NEVER used mechanistic analysis…</p>
 </div>
 </div>
 

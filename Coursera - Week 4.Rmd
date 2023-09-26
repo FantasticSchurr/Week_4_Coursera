@@ -5,16 +5,16 @@ date: "2023-09-26"
 output: html_document
 ---
 
-## Divisions of data science questions:
+# Divisions of data science questions:
 
 1. Descriptive
-2. Explanatory
+2. Exploratory
 3. Inferential
 4. Predictive
 5. Causal
 6. Mechanistic
 
-### Descriptive Analysis
+## Descriptive Analysis
 
 To *describe* or *summarize* data. Usually the first kind of analysis you perform. Generate simple summaries about the samples and their measurements. 
 
@@ -24,8 +24,50 @@ To *describe* or *summarize* data. Usually the first kind of analysis you perfor
 
 There is no inference about what the distribution of data means or predictions on how the data might trend in the future. It is just to show you a summary of the data you collected. 
 
-#### Calls in R for doing these tasks are:
+#### Some calls in R for doing these tasks are:
 
 `mean()` or `median()` or `mode()`. 
 
 You may also call `summary()`
+
+## Exploratory Analysis 
+
+The goal here is to examine or explore the data to find relationships that were not previously known. This is often done through correlation matrices or through data visualization (e.g. plotting). 
+
+We can use the ggplot package in R to plot data, for example.
+
+We can can also call `cor()` which will generate a correlation matrix for the selected variables. We can also call `cov()`, for covariance. 
+
+Critically, observing a relationship between two variables *does not* mean that one necessarily causes the other. Instead, it suggests further investigation (inferential analysis) is warranted. 
+
+Exploratory analysis are useful for formulating hypotheses and drive design for future studies and data collection. 
+
+## Inferential Statistics
+
+Goal is to use a relatively *small sample of data* to *infer* or say something about the target population (or to generalize the information from the small sample). 
+
+Typically, it involves using the data you have collected to estimate that value in the population, based on a measure of uncertainty about the estimate generated from your sample. 
+To do this we need to make certain assumptions (independence, Central Limit Theorem, etc...) to determine what distributions best encapsulates how our data is behaving. 
+
+## Predictive Analysis
+
+The goal of predictive analysis is to use *current data* to make *predictions* about *future* data. In other words, you are using current and historical data to find patterns and the predict the *likelihood* of future outcomes within a interval of certainty. 
+
+Accuracy of predictions is dependent on measuring the right variables. Some models are better or worse than others, for specific cases. You will have to choose the model with the "best fit". 
+
+## Causal Analysis
+
+The goal of causal analysis is to see what happens to one variable when we manipulate another - looking at the *cause* and *effect* of a *relationship*. 
+
+Generally, this is done through (multiple) regression analysis. We see an observed change in one variable given a 1 unit change (i.e. 1kg, 1lbs, 1 mile, 1 life-year, 1 mmHg, SaO2, etc...) in another holding everything else constant (i.e., controlling for confounders).
+
+## Mechanistic Analysis
+
+Mechanistic analyses are not nearly as commonly used as the previous analyses - the goal of mechanistic analysis is to understand the *exact changes in variables* that lead to *exact changes in other variables*. 
+These analyses are exceedingly hard to use to infer much, except in simple situations or in those that are nicely modeled by deterministic equations. Given this description, it might be clear to see how mechanistic analyses are most commonly applied to physical or engineering sciences; biological sciences, for example, are far too noisy of data sets to use mechanistic analysis. Often, when these analyses are applied, the only noise in the data is measurement error, which can be accounted for.
+
+## Summary
+
+Now you know the various types of data analysis and their goals. 
+
+As a side-note, i have NEVER used mechanistic analysis...
